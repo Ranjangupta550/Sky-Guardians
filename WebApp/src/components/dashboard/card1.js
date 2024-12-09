@@ -120,13 +120,11 @@ class App extends Component {
     };
 
     return (
-      <div
-        className="flex justify-center items-center h-screen w-full mt-40" style={{ height: "270px" }}
-      >
-        <div className="w-[1100px] bg-white shadow-lg rounded-lg p-6 mt-[-160px] flex flex-row items-center space-x-8">
-          <div className="flex-1 flex flex-col">
-            <h1 className="text-4xl font-semibold mt-[50px] ml-5 mb-4">AQI</h1>
-            <div className="w-[350px] -ml-9 h-64 custom-gauge">
+      <div className="flex justify-center items-center w-full">
+        <div className="w-full md:w-[1500px] bg-white shadow-lg rounded-lg p-6 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
+          <div className="flex-1 flex flex-col items-center">
+            <h1 className="text-4xl font-semibold mb-4">AQI</h1>
+            <div className="w-[350px] h-64 -ml-9 custom-gauge">
               <GaugeComponent
                 value={40}
                 type="grafana"
@@ -157,15 +155,15 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="flex-2 w-full -ml-10">
+          <div className="flex-1 w-full lg:w-2/3">
             <CanvasJSChart options={options} />
           </div>
 
-          <div className="flex-3 flex flex-col w-2/4 h-96 p-4 rounded-lg shadow-md">
+          <div className="flex-1 w-full lg:w-1/3 h-auto p-4 rounded-lg shadow-md">
             <h4 className="text-2xl font-semibold text-center mb-4">
               Gas Levels
             </h4>
-            <div className="flex flex-col space-y-2">
+            <div className="space-y-2">
               <div className="flex justify-between items-center font-bold">
                 <span>PM10:</span>
                 <span className="font-normal">25 µg/m³</span>

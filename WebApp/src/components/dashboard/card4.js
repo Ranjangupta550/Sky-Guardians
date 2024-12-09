@@ -26,13 +26,12 @@ const CircularChart = () => {
 const Card4 = () => {
   return (
     <div
-  className="w-full bg-white shadow-lg rounded-lg"
-  style={{ height: "385px" }}
+  className="w-full bg-white shadow-lg rounded-lg sm:h-[385px] h-auto"
 >
   <div className="p-4 flex flex-col items-center justify-center space-y-0">
     <h2 className="text-xl font-semibold mb-4">AQI Status</h2>
     <div className="flex flex-wrap justify-center gap-4">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col sm:flex-row items-center">
         <CircularChart />
         <h6 className="mt-2">hello</h6>
       </div>

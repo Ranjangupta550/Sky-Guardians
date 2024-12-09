@@ -11,23 +11,23 @@ const Dashboard = () => {
     <div className="bg-blue-50 min-h-screen p-6">
       <h1 className="text-3xl mb-6 font-bold">DASHBOARD</h1>
     
-      <div className="grid grid-cols-4 gap-6">
-        <div className="col-span-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-3">
           <Card1 />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-1">
           <Card2 />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-3">
           <Card3 />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-1">
           <Card4 />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-3">
           <Card5 />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-1">
           <Card6 />
         </div>
       </div>
