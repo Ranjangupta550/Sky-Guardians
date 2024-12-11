@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Include Google Maps API for rendering map -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script> -->
+  <title>Vaayu - Ground Control Station</title>
   <link rel="stylesheet" href="../../../public/styles/mainDashboard.css">
+  <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1tBqSZF6a32F6WpUjG2a4axvdWpFJAO0"></script>
 </head>
 <body>
   <header>
-    <h1>Vaayu - Ground Control Station</h1>
-    <button id="newPlanBtn">New Plan</button>
-    <button id="trackDroneBtn">Track Drone</button>
-    <button id="viewAnalyticsBtn">View Analytics</button>
+    <img src="../../../public/images/vaayu logo.png" alt="Vaayu Logo Left" class="logo-left">
+    <h1>Ground Control Station</h1>
+    <!-- <button id="viewAnalyticsBtn" class="button-dark">View Analytics</button> -->
+    <button id="newPlanBtn" class="button-dark">New Plan</button>
   </header>
-  
   <main>
     <!-- Map Section -->
-    <section id="mapSection">
-      <div id="map"></div>
-    </section>
     
+
     <!-- History Plan Section -->
     <section id="historyPlanSection">
       <h2>History Plan</h2>
@@ -30,7 +26,34 @@
         <!-- Plans will be dynamically added here -->
       </ul>
     </section>
-    
+    <div class="main">
+    <section id="mapSection">
+      <div id="map"></div> <!-- Adjusted height for full-screen map -->
+    </section>
+    <div id="hardware">
+      <div id="Card1" class="sensorcard">
+        <h3>Gps</h3>
+        <p id="long-lat">89,09 56,90</p>
+      </div>
+      <div id="Card2" class="sensorcard">
+        <h3>Syatem status</h3>
+        <p id="sysStatus">Offline</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Remaning time</h3>
+        <p id="remTime"> - 00:10:00 min</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Battry Remaning</h3>
+        <p id="battry"> - 00:30:00 min</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Distance</h3>
+        <p id="distance">10 km</p>
+      </div>
+    </div>
+    </div>
+
     <!-- Right Side Sensors Parameters -->
     <aside id="sensorParameters">
       <h2>Sensor Parameters</h2>
@@ -61,26 +84,26 @@
     </aside>
   </main>
 
-  <!-- Modal for new mission plan -->
+  <!-- New Plan Modal -->
   <div id="newPlanModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>New Mission Plan</h2>
+      <h2>Create New Plan</h2>
       <form id="newPlanForm">
-        <label for="planName">Plan Name:</label>
-        <input type="text" id="planName" name="planName">
-        <label for="planDate">Date:</label>
-        <input type="date" id="planDate" name="planDate">
-        <label for="planTime">Time:</label>
-        <input type="time" id="planTime" name="planTime">
-        <label for="planLocation">Location:</label>
-        <input type="text" id="planLocation" name="planLocation">
-        <button type="submit">Add Plan</button>
+        <label for="planName">Plan Name</label>
+        <input type="text" id="planName" name="planName" required>
+        
+        <label for="planLocation">Location</label>
+        <input type="text" id="planLocation" name="planLocation" required>
+
+        <label for="planTime">Time</label>
+        <input type="datetime-local" id="planTime" name="planTime" required>
+
+        <button type="submit">Create Plan</button>
       </form>
     </div>
   </div>
 
-  <!-- Custom Scripts -->
-  <script src="../../main/mainDashboard.js"></script>
+  <script src="../../../src/main/mainDashboard.js"></script>
 </body>
 </html>
