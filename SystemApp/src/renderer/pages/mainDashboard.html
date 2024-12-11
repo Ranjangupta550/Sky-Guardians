@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Google Maps API for rendering map -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script> -->
+  <link rel="stylesheet" href="../../../public/styles/mainDashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Vaayu - Ground Control Station</h1>
+    <button id="newPlanBtn">New Plan</button>
+    <button id="trackDroneBtn">Track Drone</button>
+    <button id="viewAnalyticsBtn">View Analytics</button>
+  </header>
+  
+  <main>
+    <!-- Map Section -->
+    <section id="mapSection">
+      <div id="map"></div>
+    </section>
+    
+    <!-- History Plan Section -->
+    <section id="historyPlanSection">
+      <h2>History Plan</h2>
+      <ul id="historyPlanList">
+        <!-- Plans will be dynamically added here -->
+      </ul>
+    </section>
+    
+    <!-- Right Side Sensors Parameters -->
+    <aside id="sensorParameters">
+      <h2>Sensor Parameters</h2>
+      <div id="sensorCard1" class="sensor-card">
+        <h3>AQI</h3>
+        <p id="aqiValue">--</p>
+      </div>
+      <div id="sensorCard2" class="sensor-card">
+        <h3>Temperature</h3>
+        <p id="temperatureValue">--</p>
+      </div>
+      <div id="sensorCard3" class="sensor-card">
+        <h3>Humidity</h3>
+        <p id="humidityValue">--</p>
+      </div>
+      <div id="sensorCard4" class="sensor-card">
+        <h3>CO Level</h3>
+        <p id="coLevel">--</p>
+      </div>
+      <div id="sensorCard5" class="sensor-card">
+        <h3>PM2.5</h3>
+        <p id="pm25Value">--</p>
+      </div>
+      <div id="sensorCard6" class="sensor-card">
+        <h3>PM10</h3>
+        <p id="pm10Value">--</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal for new mission plan -->
+  <div id="newPlanModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>New Mission Plan</h2>
+      <form id="newPlanForm">
+        <label for="planName">Plan Name:</label>
+        <input type="text" id="planName" name="planName">
+        <label for="planDate">Date:</label>
+        <input type="date" id="planDate" name="planDate">
+        <label for="planTime">Time:</label>
+        <input type="time" id="planTime" name="planTime">
+        <label for="planLocation">Location:</label>
+        <input type="text" id="planLocation" name="planLocation">
+        <button type="submit">Add Plan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="../../main/mainDashboard.js"></script>
+</body>
+</html>
