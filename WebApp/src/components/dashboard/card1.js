@@ -123,8 +123,8 @@ class App extends Component {
       <div className="flex justify-center items-center w-full">
         <div className="w-full md:w-[1500px] bg-white shadow-lg rounded-lg p-6 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
           <div className="flex-1 flex flex-col items-center">
-            <h1 className="text-3xl font-semibold -mt-5">AQI</h1>
-            <div className="w-[350px] h-48 -ml-9 custom-gauge">
+            <h1 className="text-3xl font-monda font-semibold -mt-5">AQI</h1>
+            <div className="w-[350px] h-48 -ml-9 font-monda custom-gauge">
               <GaugeComponent
                 value={40}
                 type="grafana"
@@ -155,36 +155,36 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="flex-1 w-full lg:w-2/3">
+          <div className="flex-1 w-full lg:w-2/3 font-monda">
             <CanvasJSChart options={options} />
           </div>
 
           <div className="flex-1 w-full lg:w-1/3 h-auto p-4 rounded-lg shadow-md">
-            <h4 className="text-2xl font-semibold text-center mb-4">
+            <h4 className="text-2xl font-monda font-semibold text-center mb-4">
               Gas Levels
             </h4>
             <div className="space-y-2">
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>PM10:</span>
                 <span className="font-normal">25 µg/m³</span>
               </div>
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>NO2:</span>
                 <span className="font-normal">15 µg/m³</span>
               </div>
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>CO2:</span>
                 <span className="font-normal">400 ppm</span>
               </div>
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>CO:</span>
                 <span className="font-normal">0.4 ppm</span>
               </div>
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>NH3:</span>
                 <span className="font-normal">5 µg/m³</span>
               </div>
-              <div className="flex justify-between items-center font-bold">
+              <div className="flex justify-between font-monda items-center font-bold">
                 <span>O3:</span>
                 <span className="font-normal">12 µg/m³</span>
               </div>

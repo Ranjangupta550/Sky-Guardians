@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./navbar";
-import Video from "../assets/VAAYU.mp4";
+import Video from "../assets/pollution_stack.mp4";
 
 const Home = () => {
   return (
