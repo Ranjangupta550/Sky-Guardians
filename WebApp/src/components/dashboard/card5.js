@@ -65,8 +65,8 @@ class App extends Component {
       ],
     };
     return (
-      <div className="bg-white p-6 rounded-lg shadow-md mx-auto">
-        <h1 className="text-2xl font-semibold mb-4">Weekly Information</h1>
+      <div className="bg-white p-6 font-monda rounded-lg shadow-md mx-auto">
+        <h1 className="text-2xl font-semibold font-monda mb-4">Weekly Information</h1>
         <CanvasJSChart options={options} />
       </div>
     );
