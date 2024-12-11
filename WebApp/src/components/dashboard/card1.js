@@ -10,7 +10,7 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class App extends Component {
   render() {
     const options = {
-      height: 300,
+      height: 200,
       animationEnabled: true,
       exportEnabled: true,
       theme: "light2",
@@ -123,8 +123,8 @@ class App extends Component {
       <div className="flex justify-center items-center w-full">
         <div className="w-full md:w-[1500px] bg-white shadow-lg rounded-lg p-6 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
           <div className="flex-1 flex flex-col items-center">
-            <h1 className="text-4xl font-semibold mb-4">AQI</h1>
-            <div className="w-[350px] h-64 -ml-9 custom-gauge">
+            <h1 className="text-3xl font-semibold -mt-5">AQI</h1>
+            <div className="w-[350px] h-48 -ml-9 custom-gauge">
               <GaugeComponent
                 value={40}
                 type="grafana"

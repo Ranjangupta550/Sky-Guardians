@@ -2,7 +2,7 @@ import React from "react";
 
 const Card2 = () => {
   return (
-    <div className="w-full bg-white shadow-lg rounded-lg sm:h-[360px] h-auto">
+    <div className="w-full bg-white shadow-lg rounded-lg sm:h-[312px] h-auto">
       <div className="p-4">
         <h2 className="text-xl font-semibold">Weather</h2>
       </div>

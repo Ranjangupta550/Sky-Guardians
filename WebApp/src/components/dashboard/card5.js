@@ -1,14 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
+import { Component } from "react";
 import CanvasJSReact from "@canvasjs/react-charts";
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class App extends Component {
   render() {
     const options = {
-      //   title: {
-      //     text: "Annual Information",
-      //   },
-      height: 300,
+      height: 200,
       data: [
         {
           type: "column",
@@ -67,7 +65,7 @@ class App extends Component {
       ],
     };
     return (
-      <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto">
+      <div className="bg-white p-6 rounded-lg shadow-md mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Weekly Information</h1>
         <CanvasJSChart options={options} />
       </div>

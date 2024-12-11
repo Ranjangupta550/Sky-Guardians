@@ -1,15 +1,32 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React from "react";
+import  { useState } from "react";
+import { 
+  FaBars, 
+  FaTimes 
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const links = [
-    { id: 1, link: "home", reload: true },
-    { id: 2, link: "about" },
-    { id: 3, link: "dashboard" },
-    { id: 4, link: "contact" }
+    {
+      id: 1,
+      link: "home",
+      reload: true,
+    },
+    {
+      id: 2,
+      link: "about",
+    },
+    {
+      id: 3,
+      link: "dashboard",
+    },
+    {
+      id: 4,
+      link: "contact",
+    },
   ];
 
   const handleNavClick = (link, reload = false) => {
@@ -21,9 +38,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-16 px-4 flex justify-between items-center z-50">
+    <div className="w-full h-20 flex justify-between items-center z-50 backdrop-blur-md">
       <div>
-        <h1 className="text-5xl ml-2">Vaayu</h1>
+        <h1 className="text-5xl text-white font-bold ml-2"><span className="text-blue-500">V</span>AAY<span className="text-green-500">U</span></h1>
       </div>
 
       {/* Desktop Menu */}
@@ -31,7 +48,7 @@ const Navbar = () => {
         {links.map(({ id, link, reload }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-700 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer capitalize font-bold text-white hover:scale-105 duration-200"
           >
             {reload ? (
               <span onClick={() => handleNavClick(link, true)}>{link}</span>
