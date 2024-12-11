@@ -1,19 +1,26 @@
-import Navbar from "./components/navbar";
+import React from "react";
+import { 
+  BrowserRouter as Router, 
+  Routes, 
+  Route 
+} from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
 import Dashboard from "./components/dashboard";
-import Footer from "./components/footer";
+import Contact from "./components/contact";
 
 function App() {
   return (
-    <div>
-      <h1>VAAYU</h1>
-      <Navbar />
-      <Home />
-      <About />
-      <Dashboard />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
