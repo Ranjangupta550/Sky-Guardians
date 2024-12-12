@@ -1,0 +1,235 @@
+/* Variables for Dark Theme */
+:root {
+  --primary-bg: #131314;
+  --header-bg: #2f2f2f;
+  --button-bg: #004a77;
+  --text-color: #fff;
+  --input-bg: #26313b;
+}
+
+/* General styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling on small screens */
+}
+
+header {
+  background-color: var(--primary-bg);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* header> img {
+  width: 150px;
+  border: 1px solid #fff;
+} */
+.logo-left {
+  width: 100px;
+}
+
+.logo-right {
+  width: 100px;
+}
+
+h1 {
+  margin: 0;
+}
+header > h1 {
+  text-align: center;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  /* padding: 15px 20px;
+   */
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30% 5% 25% 25%;
+}
+
+button:hover {
+  background-color: #003552; /* Slightly darker shade on hover */
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+#mapSection {
+  flex: 3;
+  height: 70vh;
+  width:100%;
+  overflow: hidden;
+  border-radius: 20px;
+  /* margin: 5px; */
+  position: relative;
+  top: 0;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+#historyPlanSection {
+  flex: 1;
+  background-color: var(--primary-bg);
+  padding: 10px;
+  overflow-y: auto; /* Allow scrolling for long lists */
+  /* border:1px solid #fff; */
+  border-radius: 5px;
+  /* display: flex; */
+  flex-direction: column;
+  height: 85vh;
+  /* margin: 8px 10px; */
+}
+
+#historyPlanSection h2 {
+  color: var(--text-color);
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
+#historyPlanList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#historyPlanList li {
+  background-color: #312a2a;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#sensorParameters {
+  flex: 1;
+  background-color: var(--primary-bg);
+  padding: 15px;
+  /* margin: 8px 10px; */
+  height: 84vh;
+  border-radius: 10px;
+}
+
+.sensor-card {
+  background-color: #3a3a3a;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.sensor-card h3 {
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #282a2c;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--button-bg);
+}
+
+button[type="submit"] {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #003552;
+}
+#hardware{
+  /* border: 1px solid #fff;  */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  position: relative;
+  border: 0;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--primary-bg);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:89vh;
+  /* border: 1px solid #fff; */
+  width: 65%;
+}
+.sensorcard{
+  background-color: var(--header-bg);
+  border-radius: 10px;
+  height: auto;
+  width: 180px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: px;   */
+  /* padding: 10px; */
+  /* width: auto; */
+}

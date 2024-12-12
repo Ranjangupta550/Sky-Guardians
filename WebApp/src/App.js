@@ -5,21 +5,19 @@ import {
   Route 
 } from "react-router-dom";
 import Home from "./components/home";
-import About from "./components/about";
 import Dashboard from "./components/dashboard";
+import Dashboard1 from "./components/dashboard1";
 import Contact from "./components/contact";
 
 function App() {
   return (
     <Router>
-      <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard1" element={<Dashboard1 />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
     </Router>
   );
 }

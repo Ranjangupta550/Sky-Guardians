@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaayu - Ground Control Station</title>
+  <link rel="stylesheet" href="../../../public/styles/mainDashboard.css">
+  <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1tBqSZF6a32F6WpUjG2a4axvdWpFJAO0"></script>
+</head>
+<body>
+  <header>
+    <img src="../../../public/images/vaayu logo.png" alt="Vaayu Logo Left" class="logo-left">
+    <h1>Ground Control Station</h1>
+    <!-- <button id="viewAnalyticsBtn" class="button-dark">View Analytics</button> -->
+    <button id="newPlanBtn" class="button-dark">New Plan</button>
+  </header>
+  <main>
+    <!-- Map Section -->
+    
+
+    <!-- History Plan Section -->
+    <section id="historyPlanSection">
+      <h2>History Plan</h2>
+      <ul id="historyPlanList">
+        <!-- Plans will be dynamically added here -->
+      </ul>
+    </section>
+    <div class="main">
+    <section id="mapSection">
+      <div id="map"></div> <!-- Adjusted height for full-screen map -->
+    </section>
+    <div id="hardware">
+      <div id="Card1" class="sensorcard">
+        <h3>Gps</h3>
+        <p id="long-lat">89,09 56,90</p>
+      </div>
+      <div id="Card2" class="sensorcard">
+        <h3>Syatem status</h3>
+        <p id="sysStatus">Offline</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Remaning time</h3>
+        <p id="remTime"> - 00:10:00 min</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Battry Remaning</h3>
+        <p id="battry"> - 00:30:00 min</p>
+      </div>
+      <div id="Card3" class="sensorcard">
+        <h3>Distance</h3>
+        <p id="distance">10 km</p>
+      </div>
+    </div>
+    </div>
+
+    <!-- Right Side Sensors Parameters -->
+    <aside id="sensorParameters">
+      <h2>Sensor Parameters</h2>
+      <div id="sensorCard1" class="sensor-card">
+        <h3>AQI</h3>
+        <p id="aqiValue">--</p>
+      </div>
+      <div id="sensorCard2" class="sensor-card">
+        <h3>Temperature</h3>
+        <p id="temperatureValue">--</p>
+      </div>
+      <div id="sensorCard3" class="sensor-card">
+        <h3>Humidity</h3>
+        <p id="humidityValue">--</p>
+      </div>
+      <div id="sensorCard4" class="sensor-card">
+        <h3>CO Level</h3>
+        <p id="coLevel">--</p>
+      </div>
+      <div id="sensorCard5" class="sensor-card">
+        <h3>PM2.5</h3>
+        <p id="pm25Value">--</p>
+      </div>
+      <div id="sensorCard6" class="sensor-card">
+        <h3>PM10</h3>
+        <p id="pm10Value">--</p>
+      </div>
+    </aside>
+  </main>
+
+  <button id="getelem" class="button-dark" onclick="triggerApi()">Start Telemtry</button>
+
+  <!-- New Plan Modal -->
+  <div id="newPlanModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Create New Plan</h2>
+      <form id="newPlanForm">
+        <label for="planName">Plan Name</label>
+        <input type="text" id="planName" name="planName" required>
+        
+        <label for="planLocation">Location</label>
+        <input type="text" id="planLocation" name="planLocation" required>
+
+        <label for="planTime">Time</label>
+        <input type="datetime-local" id="planTime" name="planTime" required>
+
+        <button type="submit">Create Plan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../../../src/main/mainDashboard.js"></script>
+</body>
+</html>

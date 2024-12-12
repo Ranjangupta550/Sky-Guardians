@@ -268,14 +268,14 @@ const Card3 = () => {
   return (
     <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-6 gap-6 sm:gap-0">
       <div className="bg-white p-6 rounded-lg shadow-md flex-1 h-72">
-        <h1 className="text-2xl font-semibold mb-5 text-gray-800">
+        <h1 className="text-2xl font-semibold font-monda mb-5 text-gray-800">
           Live Information
         </h1>
         <CanvasJSChart options={bounceRateOptions} />
       </div>
 
       <div className="bg-white p-6 rounded-lg shadow-md flex-1 h-72">
-        <h1 className="text-2xl font-semibold mb-5 text-gray-800">
+        <h1 className="text-2xl font-monda font-semibold mb-5 text-gray-800">
           Temperature Variation
         </h1>
         <CanvasJSChart options={temperatureVariationOptions} />
