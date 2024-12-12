@@ -10,7 +10,7 @@ import Navbar from "./navbar";
 const Dashboard1 = () => {
   return (
     <div>
-      <nav className="bg-black/70 shadow-none transition duration-300">
+      <nav className="bg-black shadow-none transition duration-300">
         <Navbar />
       </nav>
       <div className="bg-blue-50 min-h-screen p-6">
