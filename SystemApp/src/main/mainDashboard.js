@@ -107,3 +107,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch initial sensor data
   fetchSensorData();
 });
+
+async function triggerApi() {
+
+  const apiUrl = `https://127.0.0.1/8000/connect`; // Construct the API URL
+
+  try {
+      const response = await fetch(apiUrl, {
+          method: 'POST', // Use POST method
+          headers: {
+              'Content-Type': 'application/json', // Specify content type
+          },
+          body: JSON.stringify({ email }) // Send email as JSON body
+      });
+
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`); // Handle HTTP errors
+      }
+
+      const data = await response.json(); // Parse JSON response
+      console.log('Response:', data); // Log the response data
+
+  } catch (error) {
+      console.error('Error:', error); // Log any errors
+  }
+}

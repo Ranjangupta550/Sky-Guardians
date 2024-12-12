@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,13 +10,10 @@
     font-size: 24;
 }  
 
-.home {
-    background-image: url("assets/VAAYU.mp4");  
-    background-size: cover;
+.card {
+    background-image: url("./assets/bg.jpg"); 
+    background-size: cover; 
     background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;  
-    justify-content: center;  
-    text-align: center;  
+    background-color: rgba(171, 149, 149, 0.5);
+    background-blend-mode: multiply;
 }
